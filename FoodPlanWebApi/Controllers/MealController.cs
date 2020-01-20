@@ -7,7 +7,7 @@ using DataAccess.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace WebApplication1.Controllers
+namespace FoodPlanWebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{25F4D9A4-B721-49E1-8B4D-C6D02449B812}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoodPlanWebApi", "FoodPlanWebApi\FoodPlanWebApi.csproj", "{25F4D9A4-B721-49E1-8B4D-C6D02449B812}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{08F3DE22-CF16-41FB-8F76-2F54E6987175}"
 EndProject
