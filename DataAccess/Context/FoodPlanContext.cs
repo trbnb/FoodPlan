@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Models;
+using DataAccess.Models;
 using System;
 
 namespace DataAccess.Context
@@ -11,5 +11,7 @@ namespace DataAccess.Context
 #pragma warning restore CS8618 // Das Non-Nullable-Feld ist nicht initialisiert. Deklarieren Sie das Feld ggf. als "Nullable".
         public DbSet<Meal> Meals { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
+        public DbSet<IngredientInRecipe> IngredientInRecipes { get; set; }
     }
 }
