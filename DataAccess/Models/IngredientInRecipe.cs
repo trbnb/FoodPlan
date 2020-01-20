@@ -9,6 +9,6 @@ namespace DataAccess.Models
         public Guid ID { get; set; }
         public Guid RecipeId { get; set; }
         public Guid IngredientId { get; set; }
-        public IngredientMeasure Measure { get; set; }
+        public IngredientMeasure? Measure { get; set; }
     }
 }
