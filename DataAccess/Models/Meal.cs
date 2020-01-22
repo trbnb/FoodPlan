@@ -7,5 +7,6 @@ namespace DataAccess.Models
         public Guid Id { get; set; }
         public string Name { get; set; }
         public Recipe? Recipe { get; set; }
+        public string? ImageUrl { get; set; }
     }
 }
