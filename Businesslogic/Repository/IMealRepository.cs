@@ -1,5 +1,6 @@
 ﻿using Businesslogic.DTO;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,8 +8,10 @@ namespace Businesslogic.Repository
 {
     public interface IMealRepository
     {
-        public IQueryable<MealDTO> GetAll();
+        IQueryable<MealDTO> GetAll();
+        
+        Task<IEnumerable<MealDTO>> GetAllAsync();
 
-        public Task<MealDTO?> GetByIdAsync(Guid id);
+        Task<MealDTO?> GetByIdAsync(Guid id);
     }
 }

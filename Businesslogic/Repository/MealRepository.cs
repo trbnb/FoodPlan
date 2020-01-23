@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using Businesslogic.DTO;
 using DataAccess.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,16 @@ namespace Businesslogic.Repository
             this.mapper = mapper;
         }
 
-        public IQueryable<MealDTO> GetAll() => foodPlanContext.Meals.AsQueryable().ProjectTo<MealDTO>();
+        public IQueryable<MealDTO> GetAll() 
+        {
+            var queryable = foodPlanContext.Meals.AsQueryable();
+            return mapper.ProjectTo<MealDTO>(queryable);
+        }
+
+        public async Task<IEnumerable<MealDTO>> GetAllAsync() 
+        {
+            return await GetAll().ToListAsync();
+        }
 
         public async Task<MealDTO?> GetByIdAsync(Guid id)
         {
