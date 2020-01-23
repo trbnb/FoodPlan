@@ -11,7 +11,15 @@ namespace Businesslogic.Automapper
     {
         public FoodProfile()
         {
-            CreateMap<Meal, MealDTO>();
+            CreateMap<Meal, MealDTO>().ReverseMap();
+
+            CreateMap<Recipe, RecipeDTO>().ReverseMap();
+
+            CreateMap<Ingredient, IngredientDTO>().ReverseMap();
+
+            CreateMap<IngredientMeasure, IngredientMeasureDTO>().ReverseMap();
+            
+            CreateMap<IngredientInRecipe, IngredientInRecipeDTO>().ReverseMap();
         }
     }
 }

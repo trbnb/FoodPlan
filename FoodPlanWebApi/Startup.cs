@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
+using Businesslogic.Automapper;
 using DataAccess;
 using DataAccess.Context;
 using Microsoft.AspNetCore.Builder;
@@ -34,7 +36,7 @@ namespace FoodPlanWebApi
                 options.UseSqlServer(Configuration.GetConnectionString("Default"));
             });
             services.AddControllers();
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(Assembly.GetAssembly(typeof(FoodProfile)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
