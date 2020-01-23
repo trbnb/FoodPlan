@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using AutoMapper;
 using Businesslogic.Automapper;
+using Businesslogic.Repository;
 using DataAccess;
 using DataAccess.Context;
 using Microsoft.AspNetCore.Builder;
@@ -37,6 +38,8 @@ namespace FoodPlanWebApi
             });
             services.AddControllers();
             services.AddAutoMapper(Assembly.GetAssembly(typeof(FoodProfile)));
+
+            services.AddScoped<IMealRepository, MealRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
